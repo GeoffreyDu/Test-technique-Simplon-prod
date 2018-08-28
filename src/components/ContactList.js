@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import Contact from './Contact'
+import AddContacts from './AddContacts'
+import '../CSS/ContactList.css'
 
 class ContactList extends Component {
   state= {
+    research: "",
     contacts:[
-      {
-        name: "ded",
-        firstname: "joe",
-        mail: "mail1@jj.fr",
-        tel:"0102030405",
-        fonction: "flemmard pro"
-      },
       {
         name: "kujo",
         firstname: "jotaro",
-        mail: "mail2@gg.fr",
-        tel:"0100000000",
-        fonction: "hero"
+        mail: "kujotaro",
+        tel:1,
+        fonction: "kujo"
+      },
+      {
+        name: "joestar",
+        firstname: "joseph",
+        mail: "jojo",
+        tel:2,
+        fonction: "kujo"
       }
     ]
   }
 
-  onchange = e =>{
+  changer = (e) =>{
       this.setState({
         [e.target.name] : e.target.value
       })
@@ -35,17 +38,46 @@ class ContactList extends Component {
     ]
   })
 
+  AddingContact = (e) =>{
+    e.preventDefault()
+    console.log(this.state);
+    this.setState({
+      contacts:[
+        {
+          name: this.state.name,
+          firstname: this.state.firstname,
+          mail: this.state.mail,
+          tel:this.state.tel,
+          fonction: this.state.fonction
+        },
+        ...this.state.contacts
+      ]
+    })
+  }
+
   render() {
+    let filteredContacts = this.state.contacts.filter((contact)=>{
+        return contact.name.toLowerCase().indexOf(this.state.research) !== -1
+    })
     return (
-      <div>{this.state.contacts.map((people, i) => <Contact
+      <div>
+        <h1>Rechercher un contact</h1>
+        <input type="text" name="research" onChange={this.changer} placeholder="Recherche" value={this.state.research}/>
+        <h1>Ajouter un contact</h1>
+      <div className="dispo">
+        <div>{<AddContacts change={(e)=>this.changer(e)} newContact={(e)=>this.AddingContact(e)}/>}</div>
+        <div>
+          {filteredContacts.map((people, i) => <Contact
           key={i}
           name={people.name}
           firstname={people.firstname}
           mail={people.mail}
           tel={people.tel}
           fonction={people.fonction}
-          removeContact={()=>this.removeContact(i)} />)}
+          handleContact={()=>this.removeContact(i)} />)}
+        </div>
       </div>
+    </div>
     );
   }
 

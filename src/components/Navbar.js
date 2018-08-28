@@ -5,20 +5,17 @@ class Navbar extends Component {
 
   render() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">Accueil</Link>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">Accueil</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/add">Créer contact</Link>
+            <li className="nav-item">
+              <Link className="nav-link" to="contacts">Les contacts</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="contacts">Contacts</Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="#">Disabled</Link>
+            <li className="nav-item">
+              <Link className="nav-link" to="#">Disabled</Link>
             </li>
           </ul>
         </div>

@@ -1,38 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AddContacts extends Component {
-  
-  render() {
+const AddContacts = (props) =>{
     return (
       <div>
-          <h1>Ajouter contact</h1>
           <form>
-          <div class="form-group">
-            <label for="InputName">Nom</label>
-            <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Entrez le nom"/>
+          <div className="form-group">
+            <label htmlFor="InputName">Nom</label>
+            <input name="name" onChange={props.change} type="textarea" className="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Entrez le nom" value={props.name}/>
             </div>
-          <div class="form-group">
-            <label for="InputFirstname">Prénom</label>
-            <input type="text" class="form-control" id="InputFirstname" placeholder="Entrez le prénom"/>
+          <div className="form-group">
+            <label htmlFor="InputFirstname">Prénom</label>
+            <input name="firstname" onChange={props.change} type="text" className="form-control" id="InputFirstname" placeholder="Entrez le prénom" value={props.firstname}/>
           </div>
-          <div class="form-group">
-            <label for="InputMail">Mail</label>
-            <input type="mail" class="form-control" id="InputMail" placeholder="Entrez le mail"/>
+          <div className="form-group">
+            <label htmlFor="InputMail">Mail</label>
+            <input name="mail" onChange={props.change} type="mail" className="form-control" id="InputMail" placeholder="Entrez le mail" value={props.mail}/>
           </div>
-          <div class="form-group">
-            <label for="InputTel">Téléphone</label>
-            <input type="number" class="form-control" id="InputTel" placeholder="Entrez le numéro de téléphone"/>
+          <div className="form-group">
+            <label htmlFor="InputTel">Téléphone</label>
+            <input name="tel" onChange={props.change} type="text" className="form-control" id="InputTel" placeholder="Entrez numéro de téléphone" value={props.tel}/>
           </div>
-          <div class="form-group">
-            <label for="InputFonction">Fonction</label>
-            <input type="text" class="form-control" id="InputFonction" placeholder="Entrez la fonction"/>
+          <div className="form-group">
+            <label htmlFor="InputFonction">Fonction</label>
+            <input name="fonction" onChange={props.change} type="text" className="form-control" id="InputFonction" placeholder="Entrez la fonction" value={props.fonction}/>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary" onClick={props.newContact}>Submit</button>
           </form>
       </div>
     );
-  }
-
 }
 
 export default AddContacts;
