@@ -3,12 +3,26 @@
   padding:0;
 }
 
+.fond{
+  background-color: #CECECE;
+  margin-top: -20px;
+  height: 100vh;
+}
+
 .dispo{
   display: flex;
+  justify-content: space-around;
 }
 
 h1{
   margin: 20px 0px;
+  font-size: 40px;
+}
+
+.h1titre{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .dispo li {
@@ -17,5 +31,47 @@ h1{
 
 .dispo li div{
   margin: 10px;
-  
+}
+
+.cadre{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d3d8de;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.boutons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.boutons button{
+  color: #ed0036;
+  border: 1px solid #ed0036;
+  border-radius: 10px;
+  background: #ffffff;
+  margin:5px;
+  padding: 5px;
+}
+
+.boutons button:hover{
+  color: #ffffff;
+  background: #ed0036;
+}
+
+.boutons button:active{
+  transform: scale(0.95);
+}
+
+.intitule{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recherche{
+  margin-left: 10px;
 }

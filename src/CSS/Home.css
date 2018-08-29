@@ -1,0 +1,28 @@
+.bodies{
+  background: url("/images/fond.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 89vh;
+}
+
+.titre{
+  position: absolute;
+  background-color: #f7f7f7;
+  display: block;
+  margin-left: 750px;
+  margin-top: 425px;
+  transform: translateY(-50%);
+  height: 460px;
+  width: 400px;
+  box-shadow: 0px 0px 9px 5px #E5E5E5;
+  text-align: center;
+  font-size: 25px;
+}
+
+h1{
+  padding:10px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #ed0036;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/AddContacts.css'
 
 const AddContacts = (props) =>{
     return (
@@ -18,13 +19,13 @@ const AddContacts = (props) =>{
           </div>
           <div className="form-group">
             <label htmlFor="InputTel">Téléphone</label>
-            <input name="tel" onChange={props.change} type="text" className="form-control" id="InputTel" placeholder="Entrez numéro de téléphone" value={props.tel}/>
+            <input name="tel" onChange={props.change} type="text" className="form-control" id="InputTel" placeholder="Entrez le téléphone" maxLength={10} value={props.tel}/>
           </div>
           <div className="form-group">
             <label htmlFor="InputFonction">Fonction</label>
             <input name="fonction" onChange={props.change} type="text" className="form-control" id="InputFonction" placeholder="Entrez la fonction" value={props.fonction}/>
           </div>
-          <button type="submit" className="btn btn-primary" onClick={props.newContact}>Submit</button>
+          <button type="submit" className="boutons" onClick={props.newContact}>Submit</button>
           </form>
       </div>
     );

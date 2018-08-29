@@ -1,0 +1,17 @@
+button{
+  color: #ed0036;
+  border: 1px solid #ed0036;
+  border-radius: 3px;
+  background: #ffffff;
+  margin:5px;
+  padding: 5px;
+}
+
+button:hover{
+  color: #ffffff;
+  background: #ed0036;
+}
+
+button:active{
+  transform: scale(0.95);
+}

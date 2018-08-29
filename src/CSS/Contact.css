@@ -4,6 +4,7 @@
 }
 
 .cadre{
+  background: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: center;

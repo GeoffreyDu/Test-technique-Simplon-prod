@@ -1,0 +1,32 @@
+.navbar{
+  background-color: #141618;
+  color: #ffffff;
+}
+
+img{
+  width: 120px;
+  margin-right: 50px;
+}
+
+.listenavbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.itembarre{
+  list-style-type: none;
+  margin: 10px;
+}
+
+.mot{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mot:hover{
+  color: red;
+  text-decoration: none;
+}
