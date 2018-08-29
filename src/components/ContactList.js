@@ -3,6 +3,7 @@ import Contact from './Contact'
 import AddContacts from './AddContacts'
 import '../CSS/ContactList.css'
 
+//il y a deux contacts tests pour faire un exemple
 class ContactList extends Component {
   state= {
     research: "",
@@ -23,13 +24,13 @@ class ContactList extends Component {
       }
     ]
   }
-
+//permet de capter les changements dans les inputs
   changer = (e) =>{
       this.setState({
         [e.target.name] : e.target.value
       })
   }
-
+//efface en reprenant le state sauf l'élément que l'on veut supprimer
   removeContact = index =>
   this.setState({
     contacts: [
@@ -38,6 +39,7 @@ class ContactList extends Component {
     ]
   })
 
+//récupère les valeurs des inputs et les ajoute dans le state (le preventdefault évite que la page se réactualise)
   AddingContact = (e) =>{
     e.preventDefault()
     console.log(this.state);
@@ -55,18 +57,12 @@ class ContactList extends Component {
     })
   }
 
-  canBeSubmitted() {
-  const { name, firstname } = this.state.contacts;
-  return (
-    name.length > 0 &&
-    firstname.length > 0
-  );
-}
-
   render() {
+    //permet de filtrer les contacts via la barre de recherche
     let filteredContacts = this.state.contacts.filter((contact)=>{
         return contact.name.toLowerCase().indexOf(this.state.research) !== -1
     })
+    //on transmet des valeurs et des fonctions vers le composant AddContacts et Contact(que l'on map pour créer les nouveaux contacts)
     return (
       <div className='fond'>
         <h1>Rechercher un contact</h1>

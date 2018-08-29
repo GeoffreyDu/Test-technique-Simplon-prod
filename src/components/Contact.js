@@ -1,6 +1,8 @@
 import React from 'react';
 import '../CSS/Contact.css'
 
+//on a ici le modèle d'un contact;. On récupère les différentes valeurs et on les met dans des div pour les afficher
+// on récupère la fonction removeContact pour effacer dans le button au niveau du onClick
 const Contact = (props) => {
   return(
     <li className="cadre">

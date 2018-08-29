@@ -8,7 +8,6 @@ class Navbar extends Component {
   render() {
     return (
         <nav className="navbar">
-
           <ul className="listenavbar">
             <li className="itembarre">
               <img src='/images/simplon2.png' alt='logo'></img>

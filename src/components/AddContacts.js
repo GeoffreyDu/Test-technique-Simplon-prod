@@ -1,6 +1,8 @@
 import React from 'react';
 import '../CSS/AddContacts.css'
 
+// le formulaire reprend la fonction changer transmise depuis le composant ContactList que l'on place dans le onChange et chaque value est aussi transmise depuis ContactList
+// le même procédé est utilisé pour la fonction AddingContact que l'on place au onClick pour soumettre le formulaire 
 const AddContacts = (props) =>{
     return (
       <div>
